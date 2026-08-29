@@ -297,15 +297,48 @@ AsterOS is engineered for operational reliability in production environments.
 - Multi-core scalability
 - Storage and network performance tuning
 
-### Operational resilience
+### Memory cache and process scheduling
 
-The system supports:
+AsterOS adopts a resource-efficient execution model designed to reduce unnecessary RAM allocation and improve system responsiveness under sustained workloads.
 
-- High-availability setups
-- Clustered deployments
-- Snapshot and rollback workflows
-- Storage redundancy integrations
-- Recovery automation
+#### Cache strategy
+
+The kernel and userspace stack implement a layered cache strategy to minimize repeated disk and memory access:
+
+- Page cache for frequently accessed file and block data
+- CPU cache hierarchy to reduce latency and improve locality of reference
+- Kernel object caching to avoid repeated memory allocation for common structures
+- I/O buffering to smooth bursts in workload demand
+
+This model reduces pressure on memory, lowers page faults, and improves the behavior of database, web, and application workloads during high concurrency.
+
+#### Process scheduling model
+
+The AsterOS process scheduler is built to balance fairness, responsiveness, and throughput. It prioritizes:
+
+- Interactive user workloads
+- Real-time and latency-sensitive services
+- High-throughput batch and compute tasks
+- I/O-bound operations with efficient wake-up behavior
+
+The scheduler uses time slicing, priority classes, and workload-aware heuristics to prevent starvation while preserving predictable latency for critical services.
+
+#### Kernel and VFS overview
+
+At a system level, the kernel is responsible for process management, memory management, device handling, and security enforcement. The Virtual File System (VFS) layer provides a single abstract interface so that applications can access files regardless of the underlying storage technology.
+
+In practical terms:
+
+- The kernel manages processes and their memory spaces
+- The VFS standardizes file access across local disks, network shares, and virtual mounts
+- Filesystems such as ext4, XFS, and overlayfs are implemented beneath the VFS abstraction
+- Applications interact with a consistent API while the storage backend remains transparent
+
+This architecture is critical for enterprise reliability because it allows secure, portable, and maintainable software stacks without coupling user space programs to a single filesystem implementation.
+
+#### Example: kernel and VFS model in English
+
+> The kernel is the central execution layer of the operating system. It schedules tasks, manages memory, enforces permissions, handles interrupts, and coordinates access to hardware. The VFS sits above the concrete filesystem drivers and presents a unified interface to user-space applications, allowing them to read, write, and manage files without caring whether the actual storage backend is local, remote, or virtualized.
 
 ---
 
