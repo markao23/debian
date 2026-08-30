@@ -289,7 +289,14 @@ uname -a
 
 ---
 
-## 12. Reliability and Performance
+## 12. Roadmap
+
+The project roadmap is documented in Mermaid format for easier viewing and version control.
+
+- [Project roadmap](docs/roadmap.md)
+- <img src="Untitled-1.svg" alt="roadmap" />
+
+## 13. Reliability and Performance
 
 AsterOS is engineered for operational reliability in production environments.
 
