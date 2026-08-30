@@ -4,13 +4,9 @@ AsterOS is an enterprise-grade operating system built on the Debian ecosystem, d
 
 Developed by Asterion Systems, AsterOS combines the reliability of Debian with hardened system components, enterprise lifecycle management, and an optimized kernel stack tailored for modern infrastructure.
 
-## Premissa e Objetivo Empresarial
+## Business Premise and Objective AsterOS was conceived as a premium operating 
 
-AsterOS foi concebido como uma plataforma operacional premium para organizações que exigem mais do que funcionalidade: exigem beleza visual, rapidez, estabilidade e eficiência operacional. Nossa premissa é que um sistema operacional moderno deve ser ao mesmo tempo elegante e extremamente otimizado, criando uma experiência profissional para usuários, administradores e times de infraestrutura.
-
-O objetivo principal do projeto é entregar uma base tecnológica leve, performática e visualmente refinada, capaz de sustentar ambientes corporativos, estações de trabalho, servidores e infraestruturas críticas com alto nível de produtividade e baixo custo operacional. AsterOS busca combinar a confiabilidade do ecossistema Debian com uma arquitetura moderna, segura, enxuta e preparada para um futuro de escalabilidade empresarial.
-
-Nossa visão é transformar a experiência do usuário em uma jornada mais fluida, produtiva e confiável, com interfaces limpas, processo de boot eficiente, uso racional de recursos e uma base técnica que reflita a cultura de excelência da empresa.
+platform for organizations that demand more than functionality: they demand visual beauty, speed, stability, and operational efficiency. Our premise is that a modern operating system must be both elegant and highly optimized, creating a professional experience for users, administrators, and infrastructure teams. The project's primary goal is to deliver a lightweight, performant, and visually refined technology base capable of supporting enterprise environments, workstations, servers, and critical infrastructure with high productivity and low operational costs. AsterOS seeks to combine the reliability of the Debian ecosystem with a modern, secure, lean architecture prepared for a future of enterprise scalability. Our vision is to transform the user experience into a more fluid, productive, and reliable journey, with clean interfaces, an efficient boot process, rational use of resources, and a technical foundation that reflects the company's culture of excellence.
 
 ---
 
